@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+    <head>
+        
+        {% block content %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookings.css" %}">
+    </head>
+    <body>
+        <div id="booking" class="container m-5 pt-5">
+            <div class="row">
+                <div class="first col-lg-6 col-md-12">
+                    <img src="{{ package.photo.url }}" height="500px" width="100%">
+                </div>
+                <div class="second col-lg-6 col-md-12">
+                    <h3><span>Grab!</span> The best deal for your trip.</h3>
+                    <p>We're looking forward to helping you create unforgettable travel experiences that you'll cherish for a lifetime.</p>
+                    <h4>Destination: {{ package.destination_name }}</h4>
+                    <p style="font-weight: bold">Days:{{ package.days }}</p>
+                    <a href="#bookingconfirm" class="button btn border rounded-pill">BOOK</a>
+                </div>
+            </div>
+        </div>
+        <div class="container m-5 p-5" id="bookingconfirm">
+            <h4>Booking Details</h4>
+            <form action="{% url 'booking' package.id %}" method="post">
+                {% csrf_token %}
+               
+                <div class="row p-5">
+                    <div class="form-box col-lg-6 col-12">
+                        
+                      <h3>{{ package.destination_name }}</h3>
+                    </div> 
+                    <div class="form-box col-lg-6 col-12">
+                       
+                    <h3>  ₹ {{ package.amount }}</h3>
+                    </div>
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="fname">First name</label>
+                        {{form.fname}}
+                    </div> 
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="lname">last name</label>
+                        {{form.lname}}
+                    </div>
+                   
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="phone">Phone:</label>
+                        {{ form.phone }}
+                    </div>
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="whatsapp">WhatsApp:</label>
+                        {{ form.whatsapp }}
+                    </div>
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="booking_date">Booking Date:</label>
+                        {{ form.booking_date }}
+                    </div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        {% if messages %}
+    {% for message in messages %}
+        <div class="alert">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+                
+   
+        <script src="" async defer></script>
+    </body>
+    {% endblock content %}
+
+</html>

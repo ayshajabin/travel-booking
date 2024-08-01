@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./register.css" %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    </head>
+    <body>
+        <div class=" register">
+            <form action="registerview" method="post" enctype="multipart/form-data">
+            
+            <h1>REGISTER</h1>
+          <div class="input-box">
+           <input type="text" name='username'placeholder='Enter your username' />
+           {% if form.errors.username %}
+           <span class="error text-danger">{{ form.errors.username }}</span>
+           {% endif %}
+            </div>
+            
+       
+           <div class="input-box">  
+            <input type='email' name='email' placeholder='Enter your email' />
+            {% if form.errors.email %}
+            <span class="error text-danger">{{ form.errors.email }}</span>
+        {% endif %}
+            </div>
+            <div class="input-box">
+               <input type='password' name='password' placeholder='Create your password' id="myInput" />
+                <span class="eye" onclick="myFunction()">
+                    <i id="hide1" class="fa-solid fa-eye"></i>
+                    <i id="hide2" class="fa-solid fa-eye-slash"></i>
+                </span>
+                {% if form.errors.password %}
+                <span class="error text-danger">{{ form.errors.password }}</span>
+            {% endif %}
+            </div>
+            <div  class="input-box">
+              
+                <input type='password' name="confirm_password" placeholder='Confirm your password' />
+                {% if form.errors.confirm_password %}
+            <span class="error text-danger">{{ form.errors.confirm_password }}</span>
+        {% endif %}
+            </div>
+
+  
+        
+
+            <button type="submit">Register</button>
+            {%csrf_token %}
+            <div class="login-link">
+            <p>Already have an account?<a href="{% url "login" %}">login</a></p>
+        </div>
+            
+        </form>
+     </div>
+        <script src="{% static "./password.js" %}" async defer></script>
+    
+    </body>
+</html>

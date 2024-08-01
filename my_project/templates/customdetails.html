@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% extends "admin.html" %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        {% block content1 %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookstyled.css" %}">
+    </head>
+    
+    <body>
+      
+      <main class="pb-5">
+        <div class="page-header">
+        <h1 class="">Customized Details</h1>
+        </div>
+      </main>
+      <div class="table-responsive ">
+        <table width="100%"  >
+            
+                <thead>
+                  <thead>
+                    <tr>
+                      <th rowspan="2">Name</th>
+                      <th rowspan="2">UserName</th>
+                      <th rowspan="2">Email</th>
+                      <th rowspan="2">Phone</th>
+                      <th rowspan="2">Whatsapp</th>
+                      <th colspan="3">Travellers</th>
+                      <th rowspan="2">Travel Date</th>
+                      <th rowspan="2">Travel Destination</th>
+                      <th rowspan="2">Number of Days</th>
+                      <th rowspan="2">Other Suggestions</th>
+                      <th rowspan="2">Date</th>
+                    </tr>
+                    <tr>
+                      <th>Adult</th>
+                      <th>Children</th>
+                      <th>Infants</th>
+                    </tr>
+                  </thead>
+                <tbody>
+                    {% for j in result3 %}
+                  <tr>
+                    <td>{{ j.fname }}{{" "}}{{j.lname}}</td>
+                    <td >{{j.user}}</td>
+                    <td >{{j.email}}</td>
+                    <td >{{j.phone}}</td>
+                    <td >{{j.whatsapp}}</td>
+                    <td >{{j.adult}}</td>
+                    <td >{{j.child}}</td>
+                    <td >{{j.infant}}</td>
+                    <td >{{j.travel_date}} </td>
+                    <td >{{j.travel_dest}}</td>
+                    <td >{{j.num_days}} </td>
+                    <td > {{j.other}} </td>
+                    <td >{{j.customize_on}}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+             
+          </table>
+        </div>
+          {% endblock content1 %}
+        <script src="" async defer></script>
+    </body>
+</html>

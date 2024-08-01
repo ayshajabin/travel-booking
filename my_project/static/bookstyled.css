@@ -1,0 +1,83 @@
+main{
+    margin-top: 60px;
+}
+.page-header{
+    padding:1.3rem 1rem;
+    background:#E9edf2;
+}
+.table-responsive{
+    overflow:auto;
+    width: 100%;
+}
+table{
+    
+    border-collapse: collapse;
+}
+table thead tr{
+    background: #e9edf2;
+}
+table thead th{
+    padding:1rem 0rem;
+    text-align:left;
+    color:#444;
+    font-size:.9rem;
+  
+
+}
+table td{
+    padding:1rem .5rem;
+    color:#444;
+
+}
+
+th,td,table{
+    border: 1px solid #828282;
+}
+
+@media only screen and (max-width:769px){
+    table{
+        width: 900px;
+    }
+}
+.addform .styled-form {
+
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addform  .form-group {
+    margin-bottom: 20px;
+}
+
+.addform  label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.addform  input[type="file"],
+.addform  input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  
+}
+
+.addform button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.addform  button:hover {
+    background-color:red;
+}

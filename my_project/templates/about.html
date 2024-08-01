@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+    <head>
+      
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block content %}
+        <link rel="stylesheet" href="{% static "./aboutstyle.css" %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+    </head>
+    <body>
+  
+     <div id="about" class="container mt-5 p-5">
+        <div class="container container-about">
+        <div class="row">   
+            <div class="col-lg-6">
+                <h2>ABOUT </h2>
+                <h2 class="tr">Travellio</h2>
+            </div>
+            <div class="col-lg-6">
+                <p>Embark on a journey with Travellio, where we redefine travel as a seamless and delightful experience. Our commitment lies in crafting bespoke tours tailored to your unique interests, preferences, and budget, ensuring every adventure is as extraordinary as you are.
+
+               <br> Meet our team of seasoned travel experts, passionate about turning your wanderlust into reality. Collaborating closely with you, we design a personalized tour that caters to your individual needs, whether you're exploring solo, with friends, or alongside family. From your first inquiry to the moment you step back into the familiar, we're dedicated to making your journey smooth, memorable, and stress-free.
+                </p> </div>
+        </div>
+        <div class="row">   
+                <div class="col-lg-6">
+                    <h3>vision</h3>
+                    <p>At Travellio, we envision inspiring and empowering individuals to traverse the globe, fostering meaningful connections with diverse cultures. We believe in the transformative power of travel, encouraging everyone to explore beyond boundaries and embrace the beauty of our world.</p>
+                </div>
+             <div class="col-lg-6">
+                    <h3>mision</h3> 
+                <p>Our mission is to curate unparalleled travel experiences, finely tuned to the preferences of each adventurer. Simultaneously, we champion local communities, endorsing responsible tourism practices that contribute to the preservation and prosperity of the destinations we explore. Join us on a journey where every step is a celebration of exploration, connection, and responsible travel.</p>
+            </div>
+       </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container-two">
+          <img src="{% static "./img/front_bg.jpg" %}"  alt="..." height="500px" width="100%">
+        </div>
+    </div>
+    <div class="container goal">
+        <h3>Goal of Travellio</h3>
+    <p>At Travellio, our goals are rooted in providing unparalleled travel experiences. We strive for customer satisfaction excellence by exceeding expectations and offering personalized service. Committed to sustainable tourism, we minimize our environmental impact and support local communities. We aim to stay innovative, adapting to the evolving needs of modern travelers. Promoting cultural exchange, community empowerment, and global connectivity, we seek to be a positive force for change. Continuous improvement is ingrained in our culture, ensuring that each journey with Skydays is not just a trip but a transformative and responsible exploration.</p>
+</div>
+<div class="container explorer">
+    <div class="row">
+        <div class=" first col-lg-6 col-md-12">
+            <img src="{% static "./img/image.jpg "%}" height="500px" width="100%" >
+        </div>
+        <div class="second col-lg-6 col-md-12 ">
+          <h3><span>Grab!</span> The best deal for your trip.</h3>
+          <p>We're looking forward to helping you create unforgettable travel<br> experiences
+            that you'll cherish for a lifetime.</p>
+            <a href="" class="button btn text-light border rounded-pill">explore</a>
+        </div>
+    </div>
+</div>
+</div>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+              integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+               crossorigin="anonymous"></script>
+              
+          
+    </body>
+    {% endblock content %}
+</html>

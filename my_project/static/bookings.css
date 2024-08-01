@@ -1,0 +1,76 @@
+
+
+.form-control {
+    width: 75%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#booking {
+    padding-top: 30px;
+}
+#booking .first img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:30px;
+    width:100%;
+
+}
+
+#booking .second {
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:30px;
+    padding: 50px;
+    
+}
+#booking .second h3{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(104, 109, 118);
+}
+#booking .second h4{
+    color:rgb(64, 69, 80);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#bookingconfirm form{
+    color:black;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:70px;
+    padding: 50px;
+    background-color: #f1f1f1;
+}
+#bookingconfirm  .details{
+
+    color: white;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:70px;
+    padding: 50px;
+    background-color: rgb(58, 58, 83);
+}
+#bookingconfirm  .details img {
+    background-color: white;
+    border-radius: 50%;
+}
+    
+#bookingconfirm  .details h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    
+    background-color: rgb(120, 123, 129);
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+}
+#bookingconfirm .form-box h3{
+    padding: 10px;
+    background-color: rgb(120, 123, 129) ;
+    width: 200px;
+    border-radius: 5px;
+   
+}

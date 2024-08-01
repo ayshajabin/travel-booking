@@ -1,0 +1,49 @@
+main{
+    margin-top: 60px;
+}
+.page-header{
+    padding:1.3rem 1rem;
+    background:#E9edf2;
+}
+.addform .styled-form {
+
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.addform  .form-group {
+    margin-bottom: 20px;
+}
+
+.addform  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.addform  input[type="file"],
+.addform  input[type="text"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  
+}
+
+.addform button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color:green;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.addform button:hover{
+    background-color: gray;
+}

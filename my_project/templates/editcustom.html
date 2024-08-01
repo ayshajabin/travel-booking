@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+<html>{% load static %}
+    <head>
+        {% block content %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./edit.css" %}">
+    </head>
+    <body>
+        <div class="container form m-5 p-5">
+            <h4>Edit Customized Details</h4>
+            <form action="/edit_custom/{{d2.id}}/" method="post">
+                {% csrf_token %}
+                <div class="row p-5">
+                    <div class="form-group col-6">
+                        <label for="id_fname">First Name</label>
+                        <input type="text" id="id_fname" name='fname'value="{{d2.fname}}" class="form-control">
+                       
+                    </div> 
+                    <div class="form-group col-6">
+                        <label for="id_lname">Last Name</label>
+                        <input type="text" id="id_lname" name='lname'value="{{d2.lname}}" class="form-control">
+                       
+                    </div> 
+                    <div class="form-group col-6">
+                        <label for="id_phone">Phone</label>
+                        <input type="text" id="id_phone" name='phone'value="{{d2.phone}}" class="form-control">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="id_whatsapp">Whatsapp</label>
+                        <input type="text" id="id_whatsapp" name='whatsapp'value="{{d2.whatsapp}}" class="form-control">
+                    </div>
+                    <div class="group row col-12 pt-3">
+                        <h5>How Many People Are Travelling</h5><br>
+                        <div class="form-group mr-2 col-4">
+                            <label for="id_adult">Adult:</label>
+                            <input type="text" id="id_adult" name='adult'value="{{d2.adult}}" class="form-control">
+                        </div>
+                        <div class="form-group mr-2 col-4">
+                            <label for="id_child">Child:</label>
+                            <input type="text" id="id_child" name='child'value="{{d2.child}}" class="form-control">
+                        </div>
+                        <div class="form-group col-4">
+                            <label for="id_infant">Infant:</label>
+                            <input type="text" id="id_infant" name='infant'value="{{d2.infant}}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="id_travel_date">Which Date You Want To Travel</label><br>
+                        <input type="text" id="id_travel_date" name='travel_date'value="{{d2.travel_date|date:'Y-m-d'}}" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="id_travel_dest">Which Holiday Destination You Would Like To Visit?</label>
+                        <input type="text" id="id_travel_dest" name='travel_dest'value="{{d2.travel_dest}}" class="form-control">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="id_num_days">For How Many Days</label>
+                        <input type="text" id="id_num_days" name='num_days'value="{{d2.num_days}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_other">Mention Any Other Preferences (If Any)</label>
+                        <input type="text" id="id_other" name='other'value="{{d2.other }}" class="form-control">
+                    </div>
+                </div>
+                <button type="submit" class="btn">SUBMIT CHANGES</button>
+            </form>
+        </div>
+       
+        <script src="" async defer></script>
+    </body>
+    {% endblock content %}
+</html>

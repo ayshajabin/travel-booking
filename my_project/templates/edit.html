@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% extends "admin.html" %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        {% block content1 %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./editstyle.css" %}">
+    </head>
+    <body>
+        <main>
+            <div class="page-header">
+            <h1 class="">Edit Package</h1>
+            </div>
+          </main>
+      
+       <div class="addform">
+        <form action="/update/{{d.id}}" method="post" enctype='multipart/form-data' class="styled-form">
+            
+            <div class="form-group" id="photo">
+                <label>Photo:</label>
+                
+                       Currently:
+                        <a href="{{ d.photo.url }}" target="_blank">{{ d.photo.url }}</a>
+                   
+                
+                        Change:
+                        <input type="file" id="new_photo" name="photo" class="form-control">
+                   
+            </div>
+            <div class="form-group">
+                <label for="destination_name">Location Name:</label>
+                <input type='text' id="destination_name" name='destination_name' value="{{d.destination_name}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="days">Days:</label>
+                <input type="text" id="days" name='days'value="{{d.days}}" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="text" id="amount" name="amount" value="{{d.amount}}" class="form-control">
+            </div>
+            <button type="submit" value='Add' class="btn rounded-pill">SAVE CHANGES</button>
+            {% csrf_token %}
+        </form>
+    </div>
+        <script src="" async defer></script>
+        {% endblock content1 %}
+    </body>
+</html>

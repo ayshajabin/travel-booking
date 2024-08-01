@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+.home{
+    background-image: url("./img/main_bg.jpg");
+    width:100% ;
+    height:650px;
+    background-size:cover;
+    background-position: center top;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+   
+}
+
+.home h5{
+    font-family:"Lucida Console", "Courier New", monospace;
+    font-size: xx-large;
+    color:black;
+}
+.home h1{
+    font-family:"Poppins",sans-serif;
+    font-size:45px; 
+    font-weight: bold;  
+    color:rgb(55, 58, 64);
+}
+.home span{
+    color:rgb(104, 109, 118);
+}
+.home .button{
+    background-color: rgb(55, 58, 64);
+}
+.home .button:hover{
+  
+    background-color:rgb(104, 109, 118);
+}
+
+.container-custom{
+    position: relative;
+}
+.text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+
+    
+}
+.container-custom .text-container h5 {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-bottom: 20px; 
+}
+.container-custom .text-container p{
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 20px; 
+}
+
+.container-custom img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+   
+}
+.container-custom .button {
+   
+    background-color: rgb(55, 58, 64);
+    color: #fff; 
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container-custom .button:hover{
+    background-color:rgb(104, 109, 118);
+}
+.more{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+
+   margin: 30px;
+}
+.more h3{
+   color:rgb(55, 58, 64);
+   padding: 10px;
+}
+.more img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+
+}
+.more .button{
+    background-color:rgb(55, 58, 64); 
+    color: white;
+}
+
+.assure{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    margin: 60px;
+}
+
+.assure h4{
+    color:rgb(55, 58, 64) ;
+    padding: 10px;
+}
+.assure p{
+    color: gray;
+    padding: 20px;
+}
+

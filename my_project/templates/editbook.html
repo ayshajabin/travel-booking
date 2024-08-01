@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% block content %}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookedit.css" %}">
+    </head>
+    <body>
+        <div class="container m-5 p-5" id="bookingconfirm">
+            <h3>Edit Booking Details</h3>
+            <form action="/edit_book/{{d1.id}}/" method="post">
+                {% csrf_token %}
+               
+                <div class="row p-5">
+                    
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="id_fname">First name</label>
+                        <input type="text" id="id_fname" name='fname'value="{{d1.fname}}" class="form-control">
+                    </div> 
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="id_lname">last name</label>
+                        <input type="text" id="id_lname" name='lname'value="{{d1.lname}}" class="form-control">
+                    </div>
+                   
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="id_phone">Phone:</label>
+                        <input type="text" id="id_phone" name='phone'value="{{d1.phone}}" class="form-control">
+                    </div>
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="id_whatsapp">WhatsApp:</label>
+                         <input type="text" id="id_whatsapp" name='whatsapp'value="{{ d1.whatsapp }}" class="form-control">
+                    </div>
+                    <div class="form-group col-lg-6 col-12">
+                        <label for="id_booking_date">Booking Date:</label>
+                        <input type="text" id="id_booking_date" name='booking_date'value="{{ d1.booking_date|date:'Y-m-d' }}" class="form-control" placeholder="YYYY-MM-DD">
+                    </div>
+                </div>
+                <button type="submit">SUBMIT CHANGES</button>
+            </form>
+        </div>
+        <script src="" async defer></script>
+    </body>
+    {% endblock content %}
+</html>

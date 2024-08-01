@@ -1,0 +1,21 @@
+.form{
+    background-color:rgb(126, 129, 136) ;
+    border-radius: 20px;
+    
+    
+
+}
+.form h4{
+    font-weight: bold;
+}
+.form button{
+    background-color:black;
+    border: none;
+    color: white;
+}
+.form button:hover{
+    background-color:rgb(122, 122, 122);
+}
+.form .group h5{
+    font-weight: bold;
+}

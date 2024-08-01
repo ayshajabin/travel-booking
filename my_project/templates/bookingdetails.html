@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% extends "admin.html" %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        {% block content1 %}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookstyled.css" %}">
+    </head>
+
+    <body>
+      <main class="pb-5">
+        <div class="page-header">
+        <h1 class="">Bookings</h1>
+        </div>
+      </main>
+        <div class="table-responsive">
+        <table width="100%">
+            
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>WhatsApp</th>
+                    <th>Booking Date</th>
+                    <th>Booked On</th>
+                    <th>Destination</th>
+                </tr>
+                </thead>
+                <tbody>
+                  {% for booking in result5 %}
+                  <tr>
+                    
+                      <td>{{ booking.user.username }}</td>
+                      <td>{{ booking.user.email }}</td>
+                      <td>{{ booking.fname }}{{" "}}{{booking.lname}}</td>
+                      <td>{{ booking.phone }}</td>
+                      <td>{{ booking.whatsapp }}</td>
+                      <td>{{ booking.booking_date }}</td>
+                      <td>{{ booking.booked_on }}</td>
+                      <td>{{ booking.destination_name }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+             
+          </table>
+          
+          {% endblock content1 %}
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

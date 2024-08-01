@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif
+}
+  
+ .navbar{
+    color:black;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(238,238,238);
+    background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(104,109,118,1) 100%);
+    z-index: 100;
+    font-family: "Poppins",sans-serif;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.1);
+   
+}  
+
+
+nav .sidebar{
+    background-color:rgb(238, 238, 238);
+    color:black;
+   
+   
+}
+.navbar a{
+    font-size: 32px;
+    color:black; 
+    font-weight: 700;
+    font-family:"Lucida Console", "Courier New", monospace;
+    
+}
+
+
+.navbar-nav a{
+    font-size:18px;
+    color: black;
+    font-weight: 500;
+    margin-left: 40px;
+    display: inline;
+    padding-bottom: 0.25rem;
+    position: relative;
+    
+}
+.navbar-nav a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height:2px;
+    background-color: black;
+    transition:.25s ease-out;
+}
+.navbar-nav a:hover::before{
+    width: 100%;
+} 
+
+ .dropdown .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    z-index: 200; 
+    width:auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); 
+    left: 0;
+
+  
+}
+
+
+
+
+
+.footer{
+    background: rgb(238,238,238);
+background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(104,109,118,1) 100%);
+}
+
+.footer p{
+    color:rgb(55, 58, 64);
+
+}
+.footer h3{
+    color:rgb(104, 109, 118);
+}
+.footer li{
+    padding-bottom:4px;
+
+}
+
+.footer a{
+    color: rgb(72, 99, 105);
+    font-size:14px;
+    text-decoration: none;
+}
+.footer a:hover{
+    color: black;
+}
+
+.footer .copyright a{
+  color: black;
+  width:38px;
+  height:38px;
+  background-color: white;
+  display: inline-block;
+  text-align: center;
+  line-height: 38px;
+  border-radius:50%;
+  margin:0 5px;
+
+}
+
+.footer .copyright a:hover{
+    color: rgb(54, 84, 134);
+    background-color:rgb(220, 242, 241) ;
+}
+
+.footer .brand a {
+    font-size: 32px;
+    color:black;
+    font-weight: 700;
+    font-family:"Lucida Console", "Courier New", monospace;
+}
+

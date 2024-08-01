@@ -1,0 +1,97 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:"Poppins",sans-serif;
+}
+body{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("./img/front_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center ;
+    
+ }
+ .register{
+    width: 420px;
+    background-color:transparent;
+    border: 2px solid rgba(255, 255, 255,.2); 
+    backdrop-filter:blur(10px) ;
+    color:white;
+    border-radius:12px ;
+    padding: 5px 40px;
+    
+}
+.register h1{
+    font-size:36px;
+    text-align: center;
+}
+.register  .input-box{
+    margin:31px auto;
+    width: 80%;
+    border-bottom: 1px solid #fff;
+    padding-top: 10px;
+    padding-bottom:5px ;
+}
+
+.input-box input{
+    width: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color:white ;
+}
+.input-box input::placeholder{
+    color: #ccc;
+}
+.fa {
+    margin-right: 10px ;
+}
+.eye{
+    position: absolute;
+  
+}
+#hide1{
+    display:none;
+}
+
+.register .input-box .error {
+    color: rgb(246, 73, 73);
+    display: block;
+    
+}
+ul {
+    list-style-type: none;
+}
+.register button{
+    width: 100%;
+    background: white;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(73, 73, 73);
+    font-weight:600;
+    padding:8px;
+
+}
+.register .login-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+ .login-link p a{
+  color: white;
+  text-decoration: none;
+  font-weight:600;
+}
+.login-link p a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        {% block content %}
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookstyled.css" %}">
+        <link rel="stylesheet" href="{% static "./profiles.css" %}">
+    </head>
+   
+    <body>   
+       <div class="container m-5 pt-5">
+            <h1 align="center" >"{{username}}"</h1>
+            <div  class="container profile">
+              <div class="page-header">
+                  <h2>
+                      <i class="fa-solid fa-user"></i>
+                  My Profile</h2>
+                  </div>
+                <div class="row">
+                  
+                  <div class="col-lg-3 col-12">
+                  USER NAME:<h5>{{username}}</h5>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                EMAIL:<h5>{{email}}</h5>
+                  </div>
+             </div>
+            </div>
+
+            <div class="container booking">
+              <div class="page-header">
+                  <h2>
+                      <i class="fa-solid fa-circle-check"></i>
+                      My Bookings
+                  </h2> 
+              </div>
+              <div class="table-responsive py-3">
+                  <table width="100%">
+                      <thead>
+                          <tr>
+                              <th>Name</th> 
+                              
+                              <th>Phone</th>
+                              <th>Whatsapp</th>
+                              <th>Booking Date</th>
+                              <th>Travel Destination</th>
+                              <th>Date</th>
+                              <th>Edit</th>
+                              <th>Cancel</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          {% for booking in bookings %}
+                          <tr>
+                             
+                              <td>{{ booking.fname }}{{" "}}{{booking.lname}}</td> 
+                              <td>{{ booking.phone }}</td>
+                              <td>{{ booking.whatsapp }}</td>
+                              <td>{{ booking.booking_date }}</td>
+                              <td>{{ booking.destination_name }}</td>
+                              <td>{{ booking.booked_on }}</td>
+                              <td><a type'button' href= "/edit_book/{{booking.id}}/" class="btn btn-outline-primary">Edit</a></td>
+                              <td><a type='button' href="/cancel_booking/{{booking.id}}" class="btn btn-outline-danger">Cancel</a></td>
+                          </tr>
+                          {% endfor %}
+                      </tbody>
+                  </table> 
+              </div>
+          </div>
+          
+        
+            <div class="page-header ">
+              <h2 >
+                <i class="fa-solid fa-message"></i>
+                Customized</h2>
+              </div>
+            </main>
+            <div class="table-responsive pt-3">
+              <table width="100%"  >
+                  
+                      <thead>
+                        <thead>
+                          <tr>
+                            <th rowspan="2">Name</th> 
+                            <th rowspan="2">Phone</th>
+                            <th rowspan="2">Whatsapp</th>
+                            <th colspan="3">Travellers</th>
+                            <th rowspan="2">Travel Date</th>
+                            <th rowspan="2">Travel Destination</th>
+                            <th rowspan="2">Number of Days</th>
+                            <th rowspan="2">Other Suggestions</th>
+                            <th rowspan="2">Edit</th>
+                            <th rowspan="2">Cancel</th>
+                           
+                          </tr>
+                          <tr>
+                            <th>Adult</th>
+                            <th>Children</th>
+                            <th>Infants</th>
+                          </tr>
+                        </thead>
+                      <tbody>
+                          {% for j in custom %}
+                        <tr>
+                          <td>{{ j.fname }}{{" "}}{{j.lname}}</td> 
+                          <td >{{j.phone}}</td>
+                          <td >{{j.whatsapp}}</td>
+                          <td >{{j.adult}}</td>
+                          <td >{{j.child}}</td>
+                          <td >{{j.infant}}</td>
+                          <td >{{j.travel_date}} </td>
+                          <td >{{j.travel_dest}}</td>
+                          <td >{{j.num_days}} </td>
+                          <td > {{j.other}} </td>
+                          <td><a type="button"  href="/edit_custom/{{j.id}}/" class="btn btn-outline-primary">Edit</a></td>
+                          <td><a type="button"  href="/cancel_custom/{{j.id}}"class="btn btn-outline-danger" >Cancel</a></td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                   
+                </table> 
+             <div>
+             
+             </div>
+        </div>
+        
+        <button><a href="{% url 'logout' %}" >LOGOUT</a></button>
+        
+      </div>
+      
+        <script src="" async defer></script>
+    </body>
+    {% endblock content %}
+</html>

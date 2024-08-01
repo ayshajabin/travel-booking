@@ -1,0 +1,38 @@
+h3{
+    font-weight: bold;
+}
+#bookingconfirm form{
+    color:black;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:70px;
+    padding: 50px;
+    background-color: #f1f1f1;
+}
+#bookingconfirm  .details{
+
+    color: white;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:70px;
+    padding: 50px;
+    background-color: rgb(58, 58, 83);
+}
+
+    
+#bookingconfirm  .details h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button{
+    
+    background-color: rgb(120, 123, 129);
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+}
+#bookingconfirm .form-box h3{
+    padding: 10px;
+    background-color: rgb(120, 123, 129) ;
+    width: 200px;
+    border-radius: 5px;
+   
+}

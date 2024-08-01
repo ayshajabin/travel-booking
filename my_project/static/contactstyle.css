@@ -1,0 +1,69 @@
+#contact .container-contact img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    
+}
+#contact .container-contact{
+    padding-top:100px;
+}
+#contact .container-form {
+    padding-top:20px ;
+}
+#contact .container-form .form{
+    background-color:rgb(104, 109, 118);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;  
+    
+}
+
+#contact .container-form .contact{
+    padding-left: 200px;
+    padding-top: 20px;
+   
+}
+#contact .container-form .contact .add{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    background-color:rgb(104, 109, 118);
+    padding: 20px;
+    width: 60%;
+
+  
+}
+#contact .container-form .contact .call{
+    background-color:rgb(104, 109, 118);
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    padding: 20px;
+    width: 60%;
+}
+
+
+#contact  .explorer .first img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    
+    
+}
+#contact .explorer .second{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    background-color: white;
+    align-items: center;
+    padding: 100px;
+   
+}
+#contact .explorer .second h3{
+    color:  rgb(104, 109, 118);
+
+}
+#contact .explorer .second h3 span{
+    color:rgb(64, 69, 80);
+    font-weight: bolder;
+}
+#contact .explorer .second .button{
+    background-color: rgb(104, 109, 118);
+}
+#contact  .explorer .second .button:hover{
+    background-color:rgb(124, 148, 167);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% extends "admin.html" %}
+{% load static %}
+<html>
+    <head>
+        {% block content1 %}
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "./bookstyled.css" %}">
+        <link rel="stylesheet" href="{% static "./add.css" %}">
+       
+    </head>
+    <body>
+        <main>
+            <div class="page-header">
+            <h1 class="">Add Packages</h1>
+            </div>
+          </main>
+          <div class="addform">
+            <form action='packagesviews' method="post" enctype='multipart/form-data' class="styled-form">
+                <div class="form-group">
+                    <label for="photo">Photo:</label>
+                    <input type="file" id="photo" name='photo' class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="destination_name">Location Name:</label>
+                    <input type='text' id="destination_name" name='destination_name' class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="days">Days:</label>
+                    <input type="text" id="days" name='days' class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount:</label>
+                    <input type="text" id="amount" name="amount" class="form-control">
+                </div>
+                <button type="submit" value='Add' class="btn rounded-pill">ADD</button>
+                {% csrf_token %}
+            </form>
+        </div>
+        <div class="table-responsive">
+            <table width="100%">
+              <thead>
+                <tr>
+                <th >#</th>
+                  <th >Destination</th>
+                  <th >Days</th>
+                  <th >Image</th>
+                  <th>Amount</th>
+                  <th >Edit</th>
+                  <th >Delete</th>
+                 
+                </tr>
+              </thead>
+              {% for i in result2%}
+              <tbody>
+                <tr>
+                  <td >{{i.id}}</td>
+                  <td>{{i.destination_name}}</td>
+                  <td>{{i.days}}</td>
+                  <td><img src= "{{i.photo.url}}" height="150px" width="150px"></td>
+                  <td>{{i.amount}}</td>
+                  <td><a type="button" href="/update/{{i.id}}" class="btn btn-outline-primary">edit</a></td>
+                  <td><a type="button" href="/delete/{{i.id}}" class="btn btn-outline-danger">delete</a></td>  
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+          </div>
+        <script src="" async defer></script>
+        {% endblock content1 %}
+    </body>
+</html>

@@ -1,0 +1,67 @@
+.container-about{
+    align-items: center;
+    padding: 20px;
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    width: 400px;
+    
+}
+
+.container-about h2{
+    color: #495057 ;
+    font-size: 50px;
+    padding-left:150px;
+    padding-top: 10px;
+}
+
+.container-about h3{
+    color: #495057 ;
+    font-size: 30px;
+}
+.container-about p{
+    color: #495057;
+}
+
+#about .container-two img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    
+}
+#about .goal h3{
+    padding-top: 30px;
+    color: #495057 ;
+    font-size: 30px;
+}
+#about .goal p{
+    color: #495057;
+}
+
+
+#about .explorer .first img{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    
+    
+}
+#about .explorer .second{
+    box-shadow:0 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius:20px;
+    background-color: white;
+    align-items: center;
+    padding: 100px;
+   
+}
+#about .explorer .second h3{
+    color:  #495057;
+
+}
+#about .explorer .second h3 span{
+    color:rgb(64, 69, 80);
+    font-weight: bolder;
+}
+#about .explorer .second .button{
+    background-color: #495057;
+}
+#about .explorer .second .button:hover{
+    background-color:rgb(124, 148, 167);
+}
